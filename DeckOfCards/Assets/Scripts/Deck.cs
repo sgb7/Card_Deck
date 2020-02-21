@@ -5,29 +5,38 @@ using UnityEngine;
 
 public class Deck
 {
-    protected LinkedList<Card> Cards { get; set; }
+    protected LinkedList<CardModel> Cards { get; set; }
 
     public Deck()
     {
-        Cards = new LinkedList<Card>();
+        Cards = new LinkedList<CardModel>();
     }
 
-    public void AddToTop(Card card)
+    public void AddToTop(CardModel card)
     {
         Cards.AddLast(card);
     }
 
-    public Card RemoveFromTop()
+    public CardModel RemoveFromTop()
     {
-        Card topCard = Cards.Last();
+        CardModel topCard = Cards.Last();
         Cards.RemoveLast();
         return topCard;
 
     }
 
-    public void Shuffle()
+    void Shuffle<T>(List<T> list)
     {
+        System.Random random = new System.Random();
+        int n = list.Count;
+        while (n > 1)
+        {
+            int k = random.Next(n);
+            n--;
+            T temp = list[k];
+            list[k] = list[n];
+            list[n] = temp;
+        }
     }
-
 
 }
