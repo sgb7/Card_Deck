@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class TestDrawFromTop : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnGUI()
     {
-        
-    }
+        if(GUI.Button(new Rect(10, 90, 150, 28), "Draw From Top"))
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        }
     }
 }

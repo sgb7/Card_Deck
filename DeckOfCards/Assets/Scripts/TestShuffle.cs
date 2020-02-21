@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TODO: Refactor so all testing buttons are in one script. (Just do multiple if(GUI.Button)'s in the OnGUI function.
+
 public class TestShuffle : MonoBehaviour
 {
     CardModel cardModel;
@@ -11,7 +13,7 @@ public class TestShuffle : MonoBehaviour
 
     void OnGUI()
     {
-        if(GUI.Button(new Rect(10, 10, 100, 28), "Shuffle"))
+        if(GUI.Button(new Rect(10, 10, 150, 28), "Shuffle"))
         {
 
         }
