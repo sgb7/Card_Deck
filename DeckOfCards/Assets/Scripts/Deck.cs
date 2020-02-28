@@ -5,7 +5,49 @@ using UnityEngine;
 
 public class Deck
 {
-    protected LinkedList<CardModel> Cards { get; set; }
+    List<int> cards;
+
+    public IEnumerable<int> GetCards()
+    {
+        foreach (int i in cards)
+        {
+            yield return i;
+        }
+    }
+
+    public void CreateDeck()
+    {
+        cards.Clear();
+
+        for (int i = 0; i < 52; i++)
+        {
+            cards.Add(i);
+        }
+    }
+
+    public void Shuffle()
+    {
+        int n = cards.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = Random.Range(0, n + 1);
+            int temp = cards[k];
+            cards[k] = cards[n];
+            cards[n] = temp;
+        }
+
+    }
+
+    /*void Awake()
+    {
+        cards = new List<int>();
+        CreateDeck();
+    }*/
+
+
+
+    /*protected LinkedList<CardModel> Cards { get; set; }
 
     public Deck()
     {
@@ -25,18 +67,16 @@ public class Deck
 
     }
 
-    void Shuffle<T>(List<T> list)
+    public void Shuffle()
     {
-        System.Random random = new System.Random();
-        int n = list.Count;
+        int n = Cards.Count;
         while (n > 1)
         {
-            int k = random.Next(n);
             n--;
-            T temp = list[k];
-            list[k] = list[n];
-            list[n] = temp;
+            int k = Random.Range(0, n + 1);
+            int temp = Cards[k];
+            Cards[k] = Cards[n];
+            Cards[n] = temp;
         }
-    }
-
+    }*/
 }
