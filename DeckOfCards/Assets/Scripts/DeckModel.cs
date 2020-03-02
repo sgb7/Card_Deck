@@ -14,18 +14,6 @@ public class DeckModel : MonoBehaviour
         }
     }
 
-    public int Pop()
-    {
-        int temp = cards[0];
-        cards.RemoveAt(0);
-        return temp;
-    }
-
-    public void Push(int card)
-    {
-        cards.Add(card);
-    }
-
     public void Shuffle()
     {
         int n = cards.Count;
