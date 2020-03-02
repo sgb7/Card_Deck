@@ -8,7 +8,7 @@ public class DeckModel : MonoBehaviour
 
     public IEnumerable<int> GetCards()
     {
-        foreach (int i in cards)
+        foreach(int i in cards)
         {
             yield return i;
         }
@@ -26,15 +26,8 @@ public class DeckModel : MonoBehaviour
         cards.Add(card);
     }
 
-    public void CreateDeck()
+    public void Shuffle()
     {
-        cards.Clear();
-
-        for (int i = 0; i < 52; i++)
-        {
-            cards.Add(i);
-        }
-
         int n = cards.Count;
         while (n > 1)
         {
@@ -44,6 +37,18 @@ public class DeckModel : MonoBehaviour
             cards[k] = cards[n];
             cards[n] = temp;
         }
+    }
+
+    public void CreateDeck()
+    {
+        cards.Clear();
+
+        for(int i = 0; i < 52; i++)
+        {
+            cards.Add(i);
+        }
+
+        Shuffle();
     }
 
     void Awake()

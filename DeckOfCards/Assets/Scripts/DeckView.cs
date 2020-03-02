@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AddDeck : MonoBehaviour
+//[RequireComponent(typeof(DeckModel))]
+public class DeckView : MonoBehaviour
 {
-    Deck deck;
+    DeckModel deck;
 
     public Vector3 start;
     public float cardOffset;
@@ -12,15 +13,15 @@ public class AddDeck : MonoBehaviour
 
     void Start()
     {
-        deck = GetComponent<Deck>();
+        deck = GetComponent<DeckModel>();
         ShowCards();
     }
 
-    void ShowCards()
+    public void ShowCards()
     {
         int cardCount = 0;
 
-        foreach (int i in deck.GetCards())
+        foreach(int i in deck.GetCards())
         {
             float co = cardOffset * cardCount;
 

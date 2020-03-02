@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Card : MonoBehaviour
+public class CardModel : MonoBehaviour
 {
     SpriteRenderer spriteRenderer;
 
@@ -13,7 +13,7 @@ public class Card : MonoBehaviour
 
     public void ToggleFace(bool showFace)
     {
-        if (showFace)
+        if(showFace)
         {
             spriteRenderer.sprite = faces[cardIndex];
         }
