@@ -1,0 +1,5 @@
+Milestone 3 Reflection:
+
+	Unfortunately, I didn’t finish this project. So that sucks. However, I’m out of time at this point, so I’m turning in what I’ve got. 
+	I’m happy with what I did manage to get done, I think. I probably could’ve made it cleaner, if I was more familiar with Unity, but it works, so I can live with what I’ve got for now. My cards insatiate, and there’s one working button, which is add deck. The rest I wasn’t able to figure out in time, in terms of scripting. I do have a shuffle function in my code, though, and it shuffles the new decks generated; I just wasn’t able to figure out how to shuffle decks already instantiated.
+	When I started this project, I first attempted to merge what I had already made with some of the suggested coding. It didn’t work out, so I tried a different route, this time relying more on my old code as a base. That went a little better. I think if I’d started a day or two earlier, I would’ve finished, so I’ll try for that next time. The only reason I didn’t this time around was because I got busy with other classwork that was due around the same time or earlier.
