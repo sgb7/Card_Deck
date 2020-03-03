@@ -39,4 +39,14 @@ public class DeckView : MonoBehaviour
             cardCount++;
         }
     }
+
+    public void DrawFromTop()
+    {
+        //TODO
+    }
+
+    public void DrawFromBottom()
+    {
+        //TODO
+    }
 }
